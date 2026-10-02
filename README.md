@@ -4,7 +4,7 @@ A responsive hiking guide for Utah mountain trails, built with semantic HTML, CS
 
 ![Summit Trails](preview.jpg)
 
-**Live site:** https://reynaldonikola.github.io/summit-trails-responsive-sitegithub.io/
+**Live site:** https://reynaldonikola.github.io/summit-trails/
 
 ## What it does
 

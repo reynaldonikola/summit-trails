@@ -1,28 +1,43 @@
-# Summit Trails – Responsive Web Experience
+# Summit Trails
 
-This project was created for Project 4: Responsive Web Site, CSS Theme and Refactor.
+A responsive hiking guide for Utah mountain trails, built with semantic HTML, CSS Grid, Flexbox and vanilla JavaScript. No framework and no build step.
 
-## Features
-- Organized CSS in `css/main.css`
-- Separate theme overrides in `css/theme.css`
-- JavaScript theme toggle in `js/script.js`
-- Responsive layout using Grid and Flexbox
-- Professional visual presentation with image-based sections
-- Mobile friendly design
+![Summit Trails](preview.jpg)
 
-## File Structure
-- index.html
-- css/main.css
-- css/theme.css
-- js/script.js
-- images/
+**Live site:** https://reynaldonikola.github.io/summit-trails-responsive-sitegithub.io/
 
-## Self Grade
---SELF GRADE--
-REFACTOR CSS-FIX       A
-CSS THEME              A
-CSS THEME TOGGLE       A
-MOBILE RESPONSIVE      A
+## What it does
 
-## Additional Comments
-The website was redesigned with a stronger visual hierarchy, cleaner spacing, image sections, and a dramatic alternate theme.
+- Theme toggle in the header that switches light and dark and remembers the choice in `localStorage`
+- Falls back to the visitor's system theme when no choice has been stored
+- Full-bleed hero with a slow pan on load
+- Trail cards with hover lift and image zoom, laid out with CSS Grid `auto-fit`
+- Sections that fade in through `IntersectionObserver`, staggered inside each grid
+- Nav link that tracks the section currently on screen
+- Gallery with captions over a gradient, collapsing from three columns to one
+- Every animation turns off under `prefers-reduced-motion`
+
+## Built with
+
+HTML5, CSS custom properties, CSS Grid, Flexbox, `IntersectionObserver`, `localStorage`.
+
+## Structure
+
+```
+index.html
+css/main.css
+js/main.js
+images/
+```
+
+## Running it
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open http://localhost:8000.
+
+## Credits
+
+Photography generated for this project. Built by Reynaldo Moros as coursework at Utah Valley University.

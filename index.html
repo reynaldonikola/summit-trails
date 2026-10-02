@@ -1,174 +1,206 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Summit Trails is a responsive hiking and travel inspiration website with theme toggle support.">
-  <title>Summit Trails | Responsive Web Experience</title>
-  <link rel="stylesheet" href="./css/main.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Summit Trails</title>
+<meta name="description" content="A responsive hiking guide for Utah mountain trails, built with CSS Grid, Flexbox and a light and dark theme toggle.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="brand-block">
-      <p class="eyebrow">Explore Utah</p>
-      <h1>Summit Trails</h1>
-      <p class="tagline">A polished hiking guide with responsive design, strong visual hierarchy, and a dramatic alternate theme.</p>
-    </div>
 
-    <nav class="main-nav" aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#featured">Featured</a>
-      <a href="#tips">Tips</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
+<a class="skip" href="#about">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="bar">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 32 32" aria-hidden="true" class="mark"><path d="M2 26 12 8l6 10 3-5 9 13z" fill="currentColor"/></svg>
+      Summit Trails
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#tips">Tips</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+    <div class="bar-end">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme">
+        <span class="sun" aria-hidden="true"></span>
+        <span class="label">Theme</span>
+      </button>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span><span class="sr">Menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+    <a href="#about">About</a>
+    <a href="#featured">Featured</a>
+    <a href="#tips">Tips</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false">
-      Switch Theme
-    </button>
-  </header>
+<section class="hero">
+  <img src="images/hero.jpg" alt="Wasatch mountain ridgeline at sunrise with a trail through wildflowers" class="hero-img">
+  <div class="hero-copy">
+    <p class="eyebrow">Weekend escape</p>
+    <h1>A hiking guide for mountain lovers</h1>
+    <p class="lede">Scenic trails, practical advice and local inspiration, in a layout built with Flexbox, CSS Grid and a theme you can switch in one click.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#featured">View featured trails</a>
+      <a class="btn ghost" href="#gallery">See the gallery</a>
+    </div>
+  </div>
+</section>
 
-  <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="section-label">Weekend escape</p>
-        <h2>Responsive hiking guide for mountain lovers</h2>
-        <p>
-          Discover scenic trails, practical hiking advice, and beautiful local inspiration in a modern,
-          mobile-friendly layout built with Flexbox, Grid, and theme overrides.
-        </p>
-        <div class="hero-actions">
-          <a class="primary-button" href="#featured">View Featured Trails</a>
-          <a class="secondary-button" href="#gallery">See Gallery</a>
-        </div>
-      </div>
+<main>
 
-      <div class="hero-visual">
-        <img src="./images/hero-mountain.jpg" alt="Mountain landscape with a trail and sunrise">
-      </div>
-    </section>
-
-    <section id="about" class="intro-grid">
-      <article class="intro-card">
-        <h3>Why this site?</h3>
-        <p>
-          This project demonstrates cleaner structure, improved spacing, better alignment, and a more cohesive
-          visual system than a basic starter page.
-        </p>
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">About</p>
+      <h2>Built to be read on the trailhead</h2>
+      <p class="lede">Most hiking pages break down on a phone, exactly where people read them. This one is built the other way around.</p>
+    </div>
+    <div class="cards three">
+      <article class="card reveal">
+        <span class="num">01</span>
+        <h3>Structure first</h3>
+        <p>Semantic sections, one clear heading level per block and spacing that holds up from 320 pixels to a wide monitor.</p>
       </article>
-
-      <article class="intro-card">
-        <h3>What changed?</h3>
-        <p>
-          The page uses organized CSS, responsive layout patterns, reusable card styling, and a full alternate
-          theme loaded with JavaScript.
-        </p>
+      <article class="card reveal">
+        <span class="num">02</span>
+        <h3>Reusable system</h3>
+        <p>Colors, spacing and card styles live in custom properties, so a change in one place moves the whole page.</p>
       </article>
-
-      <article class="intro-card">
+      <article class="card reveal">
+        <span class="num">03</span>
         <h3>Theme toggle</h3>
-        <p>
-          The button in the header appends a separate stylesheet to the bottom of the head tag and toggles
-          between the original and alternate theme.
-        </p>
+        <p>The button in the header flips between light and dark, and the choice is remembered the next time you open the page.</p>
       </article>
-    </section>
-
-    <section id="featured" class="featured-section">
-      <div class="section-heading">
-        <p class="section-label">Top picks</p>
-        <h2>Featured trails</h2>
-        <p>Three memorable routes with different vibes, all presented in a responsive card layout.</p>
-      </div>
-
-      <div class="trail-grid">
-        <article class="trail-card">
-          <img src="./images/bell-canyon.jpg" alt="Bell Canyon style mountain landscape">
-          <div class="trail-content">
-            <h3>Bell Canyon</h3>
-            <p>Great views, fresh air, and a rewarding route for hikers looking for a scenic climb.</p>
-            <ul class="trail-meta">
-              <li>Difficulty: Moderate</li>
-              <li>Best for: Views</li>
-              <li>Time: 2 to 3 hours</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="trail-card">
-          <img src="./images/cecret-lake.jpg" alt="Alpine lake landscape with wildflowers">
-          <div class="trail-content">
-            <h3>Cecret Lake</h3>
-            <p>A family-friendly trail with alpine scenery, colorful flowers, and easy photo stops.</p>
-            <ul class="trail-meta">
-              <li>Difficulty: Easy</li>
-              <li>Best for: Families</li>
-              <li>Time: 1 to 2 hours</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="trail-card">
-          <img src="./images/donut-falls.jpg" alt="Waterfall trail through the forest">
-          <div class="trail-content">
-            <h3>Donut Falls</h3>
-            <p>A short adventure that works well for beginners who want a fun and accessible destination.</p>
-            <ul class="trail-meta">
-              <li>Difficulty: Easy</li>
-              <li>Best for: Quick trips</li>
-              <li>Time: 1 hour</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="tips" class="tips-panel">
-      <div>
-        <p class="section-label">Trail advice</p>
-        <h2>Quick hiking tips</h2>
-        <p>Start early, wear the right shoes, check conditions, and always pack more water than you think you need.</p>
-      </div>
-      <div class="tips-list">
-        <div class="tip-box">
-          <h3>Check weather</h3>
-          <p>Mountain weather changes quickly, so layer up and plan ahead.</p>
-        </div>
-        <div class="tip-box">
-          <h3>Bring essentials</h3>
-          <p>Water, snacks, and a charged phone should always be in your pack.</p>
-        </div>
-        <div class="tip-box">
-          <h3>Know your route</h3>
-          <p>Review distance, elevation, and trail conditions before you leave.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="gallery" class="gallery-section">
-      <div class="section-heading">
-        <p class="section-label">Visual mood</p>
-        <h2>Mountain gallery</h2>
-      </div>
-      <div class="gallery-grid">
-        <img src="./images/gallery-1.jpg" alt="Mountain sunset">
-        <img src="./images/gallery-2.jpg" alt="Alpine mountain view">
-        <img src="./images/gallery-3.jpg" alt="Night mountain sky">
-      </div>
-    </section>
-  </main>
-
-  <footer id="contact" class="site-footer">
-    <div>
-      <h2>Summit Trails</h2>
-      <p>Designed as a responsive project page with a professional presentation and theme toggle.</p>
     </div>
-    <div class="footer-links">
-      <p>Email: hello@summittrails.com</p>
-      <p>Location: Utah Inspiration</p>
-    </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="./js/script.js"></script>
+<section id="featured" class="section alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Top picks</p>
+      <h2>Featured trails</h2>
+      <p class="lede">Three memorable routes with different personalities, in a responsive card layout.</p>
+    </div>
+    <div class="trails">
+      <article class="trail reveal">
+        <div class="shot"><img src="images/bell-canyon.jpg" alt="Rocky canyon trail with a view over the valley" loading="lazy"></div>
+        <div class="trail-body">
+          <h3>Bell Canyon</h3>
+          <p>Great views, fresh air and a rewarding climb for hikers who want to earn the overlook.</p>
+          <ul class="meta">
+            <li><span>Difficulty</span> Moderate</li>
+            <li><span>Best for</span> Views</li>
+            <li><span>Time</span> 2 to 3 hours</li>
+          </ul>
+        </div>
+      </article>
+      <article class="trail reveal">
+        <div class="shot"><img src="images/cecret-lake.jpg" alt="Alpine lake reflecting peaks, surrounded by wildflowers" loading="lazy"></div>
+        <div class="trail-body">
+          <h3>Cecret Lake</h3>
+          <p>A family friendly trail with alpine scenery, summer wildflowers and easy photo stops along the way.</p>
+          <ul class="meta">
+            <li><span>Difficulty</span> Easy</li>
+            <li><span>Best for</span> Families</li>
+            <li><span>Time</span> 1 to 2 hours</li>
+          </ul>
+        </div>
+      </article>
+      <article class="trail reveal">
+        <div class="shot"><img src="images/donut-falls.jpg" alt="Waterfall between large boulders in a forested canyon" loading="lazy"></div>
+        <div class="trail-body">
+          <h3>Donut Falls</h3>
+          <p>A short adventure that works for beginners who want a fun destination without a long day out.</p>
+          <ul class="meta">
+            <li><span>Difficulty</span> Easy</li>
+            <li><span>Best for</span> Quick trips</li>
+            <li><span>Time</span> 1 hour</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="tips" class="section">
+  <div class="wrap split">
+    <div class="reveal">
+      <p class="eyebrow">Trail advice</p>
+      <h2>Quick hiking tips</h2>
+      <p>Start early, wear the right shoes, check conditions and pack more water than you think you need. The mountain does not care about your schedule.</p>
+    </div>
+    <ul class="tips reveal">
+      <li>
+        <h3>Check the weather</h3>
+        <p>Mountain weather turns fast. Layer up and look at the forecast the morning of, not the night before.</p>
+      </li>
+      <li>
+        <h3>Bring the essentials</h3>
+        <p>Water, snacks and a charged phone belong in the pack every time, even on a one hour trail.</p>
+      </li>
+      <li>
+        <h3>Know your route</h3>
+        <p>Read the distance, the elevation gain and recent trail conditions before you leave the house.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="gallery" class="section alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Visual mood</p>
+      <h2>Mountain gallery</h2>
+    </div>
+    <div class="gallery">
+      <figure class="reveal tall"><img src="images/gallery-1.jpg" alt="Two hikers on a ridge above a sea of clouds at dawn" loading="lazy"><figcaption>Ridge walk at first light</figcaption></figure>
+      <figure class="reveal"><img src="images/gallery-2.jpg" alt="Golden aspen trees along a mountain trail in autumn" loading="lazy"><figcaption>Aspens in October</figcaption></figure>
+      <figure class="reveal"><img src="images/gallery-3.jpg" alt="Hiking gear laid out on a rock at an overlook" loading="lazy"><figcaption>What goes in the pack</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="wrap contact">
+    <div class="reveal">
+      <p class="eyebrow">Contact</p>
+      <h2>Planning a weekend?</h2>
+      <p class="lede">This is a student project, so the details below are placeholders.</p>
+    </div>
+    <ul class="reveal contact-list">
+      <li><span>Email</span> hello@summittrails.com</li>
+      <li><span>Location</span> Utah, United States</li>
+      <li><span>Season</span> June through October</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <p>Summit Trails, a coursework project by Reynaldo Moros.</p>
+    <p><a href="https://github.com/reynaldonikola">github.com/reynaldonikola</a></p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
